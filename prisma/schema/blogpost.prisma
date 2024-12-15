@@ -1,0 +1,14 @@
+model blogpost {
+  id         Int       @id @default(autoincrement())
+  userId     String
+  title      String?
+  tags       Json?
+  author     String
+  hero_image String?
+  content    String?   @db.VarChar(3000)
+  status     String?
+  views      Int?
+  visibility String?
+  createdAt  DateTime? @default(now())
+  updatedAt  DateTime? @updatedAt
+}

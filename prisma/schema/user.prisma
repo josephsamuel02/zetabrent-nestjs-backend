@@ -1,0 +1,18 @@
+model User {
+  id                 Int       @id @default(autoincrement())
+  userId             String    @unique
+  user_name          String?
+  email              String?   @unique
+  phone_number       String?
+  first_name         String?
+  last_name          String?
+  middle_name        String?
+  date_of_birth      DateTime?
+  profile_img        String?
+  profile_poster_img String?
+  about              String?
+  art_focus          String?
+  bio                String?
+  createdAt          DateTime  @default(now())
+  updatedAt          DateTime  @updatedAt
+}
